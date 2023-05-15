@@ -11,10 +11,14 @@ urlFragment: hello-spring-function-azure
 # Example "Hello, world" Spring Boot application that runs on Azure Functions
 
 This is a sample application to showcase the use of Spring Cloud Function on top of Azure Functions.
+This sample application is taken from https://github.com/azure-samples/hello-spring-function-azure/tree/master/ and
+adopted to provide a sample model for checking some input data structure and return the check result. The check is only
+mocked.
 
 ## Features
 
-This is just a "Hello, world", but it uses domain objects so it's easy to extend to do something more complex.
+This is just a "Hello, world", but it uses domain objects TestInput, TestResult and so on, so it's easy to extend to do
+something more complex.
 
 ## Getting Started
 
