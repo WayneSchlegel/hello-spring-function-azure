@@ -3,7 +3,6 @@
   "Values": {
     "AzureWebJobsStorage": "",
     "FUNCTIONS_WORKER_RUNTIME": "java",
-    "AzureWebJobsDashboard": "",
-    "MAIN_CLASS": "com.example.CheckApplication"
+    "AzureWebJobsDashboard": ""
   }
 }
