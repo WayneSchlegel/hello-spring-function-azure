@@ -4,10 +4,11 @@ import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
 
-import static io.gatling.javaapi.core.CoreDsl.*;
+import static io.gatling.javaapi.core.CoreDsl.atOnceUsers;
+import static io.gatling.javaapi.core.CoreDsl.scenario;
 import static io.gatling.javaapi.http.HttpDsl.http;
 
-public class LoadTest extends Simulation {
+public class LoadTestCheck extends Simulation {
 
     HttpProtocolBuilder httpProtocol = http
             .baseUrl("http://localhost:7071") // Here is the root for all relative URLs
@@ -17,9 +18,9 @@ public class LoadTest extends Simulation {
             .acceptEncodingHeader("gzip, deflate")
             .userAgentHeader("Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0");
 
-    ScenarioBuilder scn = scenario("Hello function load test") // Test the Azure Function
-            .exec(http("hello")
-                    .get("/api/hello"));
+    ScenarioBuilder scn = scenario("Check function load test") // Test the Azure Function
+            .exec(http("check")
+                    .get("/api/check"));
 
     {
         setUp(
