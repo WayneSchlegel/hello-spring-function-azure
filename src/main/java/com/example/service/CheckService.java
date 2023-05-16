@@ -12,7 +12,7 @@ public class CheckService {
         final var result = new TestResult();
         final var dummyComplaint = new Complaint();
         dummyComplaint.setDescription("Dummy-Fehler");
-        final var dummyComplaintParameter = new ComplaintParameter("dummy-key", testInput.getName());
+        final var dummyComplaintParameter = new ComplaintParameter("dummy-key", testInput.getTestAttribute());
         dummyComplaint.addComplaintParameter(dummyComplaintParameter);
         dummyComplaint.setCheckId("dummy-Check");
         dummyComplaint.setReferenceId("dummy-referenceId");

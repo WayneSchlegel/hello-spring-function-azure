@@ -2,20 +2,20 @@ package com.example.model;
 
 public class TestInput {
 
-    private String name;
+    private String testAttribute;
 
     public TestInput() {
     }
 
-    public TestInput(String name) {
-        this.name = name;
+    public TestInput(String testAttribute) {
+        this.testAttribute = testAttribute;
     }
 
-    public String getName() {
-        return name;
+    public String getTestAttribute() {
+        return testAttribute;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTestAttribute(String testAttribute) {
+        this.testAttribute = testAttribute;
     }
 }

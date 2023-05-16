@@ -18,11 +18,11 @@ public class CheckHandler extends FunctionInvoker<TestInput, TestResult> {
             HttpRequestMessage<Optional<TestInput>> request,
             ExecutionContext context) {
         TestInput testInput = request.getBody()
-                .filter((u -> u.getName() != null))
+                .filter((u -> u.getTestAttribute() != null))
                 .orElseGet(() -> new TestInput(
                         request.getQueryParameters()
-                                .getOrDefault("name", "world")));
-        context.getLogger().info("TestInput name: " + testInput.getName());
+                                .getOrDefault("parameter", "world")));
+        context.getLogger().info("TestInput parameter: " + testInput.getTestAttribute());
         return request
                 .createResponseBuilder(HttpStatus.OK)
                 .body(handleRequest(testInput, context))

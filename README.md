@@ -46,7 +46,7 @@ ref. https://stackoverflow.com/questions/54183387/how-to-stop-an-azure-function-
 
 And you can test it using a cURL command:
 
-`curl http://localhost:7071/api/check -d '{"someParameter": "Azure"}'`
+`curl http://localhost:7071/api/check -d '{"parameter": "Azure"}'`
 
 ## Deploying to Azure Functions
 
@@ -57,13 +57,13 @@ Deploy the application on Azure Functions with the Azure Function Maven plug-in:
 You can then test the running application, by running a POST request:
 
 ```
-curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/check -d '{"someParameter": "Azure"}'
+curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/check -d '{"parameter": "Azure"}'
 ```
 
 Or a GET request:
 
 ```
-curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/check?someParameter=Azure
+curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/check?parameter=Azure
 ```
 
 Replace the `<YOUR_SPRING_FUNCTION_NAME>` part by the name of your Spring Function.
